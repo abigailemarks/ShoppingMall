@@ -5,5 +5,13 @@ public class Store {
 	public Store( String title) {
 		this.title=title;
 	}
+	public void script(Shopper theShopper) {
+	
+	}
+	@Override
+	public String toString() {
+		return title;
+	}
+	
 
 }

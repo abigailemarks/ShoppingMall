@@ -1,15 +1,22 @@
+import java.util.*;
+
+import ls.java.menu.LSMenu;
 
 public class NatickCollection extends Mall {
-	
-	public NatickCollection(){
+	ArrayList<Store> StoreList = new ArrayList<Store>();
+
+	public NatickCollection() {
 		super("Natick Collection");
+
 	}
-	static Store Apple =new Apple();
-	static Store Nordstroms = new Nordstroms();
-	static Store Wegmans = new Wegmans();
-	static Store[] StoreList= {Apple, Nordstroms , Wegmans};
 
-
-	
+	public ArrayList<Store> makestores() {
+		Store Apple = new Apple();
+		StoreList.add(Apple);
+		Store Nordstroms = new Nordstroms();
+		StoreList.add(Nordstroms);
+		Store Wegmans = new Wegmans();
+		StoreList.add(Wegmans);
+		return StoreList;
+	}
 }
-

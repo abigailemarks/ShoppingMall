@@ -1,27 +1,37 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
 import ls.java.menu.LSMenu;
 
 public class Shopper {
 
 	String name;
 	double balance;
-	public Shopper(String name, double balance) {
-		this.name=name;
-		this.balance=balance;
+	 ArrayList<Items>PurchaseList=new ArrayList<Items>();
+
+	public Shopper(String name, double balance,	ArrayList<Items>PurchaseList) {
+		this.name = name;
+		this.balance = balance;
+		this.PurchaseList=PurchaseList;
 	}
 
-	public void visit( Mall theMall) {
-		System.out.println("Welcome to the Natick Collection.  Your debit card balance is $6000. ");
-		System.out.println("Please choose one of the following stores."); 
-		System.out.println("You can also type B to see your balance,");	
-		System.out.println("or L to list the items you have purchased");
+	public void visit(Mall theMall) {
+		System.out.println("Welcome to"+ theMall.mallname +"Your debit card balance is "+ balance);
+		System.out.println("Please choose one of the following stores.");
+		System.out.println("You can also type B to see your balance,");
+		ArrayList<Store> StoreList = new ArrayList<Store>();
+		StoreList=theMall.makestores();
 		
-		LSMenu myMenu = new LSMenu("Choose one: ");  
-		for(int i =0; i<NatickCollection.StoreList.length;i++) {
-			myMenu.addItem(NatickCollection.StoreList[i].toString());
+		LSMenu myMenu = new LSMenu("Choose one: ");
 
+		for (int i = 0; i < StoreList.size(); i++) {
+			myMenu.addItem(StoreList.get(i).toString());
 		}
-		myMenu.displayAndChoose();
+		int answer= myMenu.displayAndChoose();
+
+		StoreList.get(answer - 1).script(this);
+		
+	
+
 	}
 }
-
-
