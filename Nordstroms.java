@@ -9,9 +9,9 @@ public class Nordstroms extends Store {
 		
 		System.out.println("hi welcome to nordstroms!! we sell");
 		LSMenu myMenu = new LSMenu("Choose one: ");
-		Items red= new Items("shoes", 67);
-		Items blue= new Items("jeans", 500);
-		Items head= new Items("headband", 15);
+		Items red= new Items("shoes", 67,"nordstrom");
+		Items blue= new Items("jeans", 500,"nordstrom");
+		Items head= new Items("headband", 15,"nordstrom");
 		Items[] Itemlist= {head, red, blue};
 		for (int i = 0; i < Itemlist.length; i++) {
 			myMenu.addItem(Itemlist[i].toString()+" " + Itemlist[i].price);
