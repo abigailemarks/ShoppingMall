@@ -48,20 +48,7 @@ public class Shopper {
 			StoreList.get(answer - 1).script(this);}
 		}
 
-		/*
-		 * public class Purchase{ ArrayList<Items> PurchaseList=new ArrayList<Items>();
-		 * public Purchase(Shopper theShopper) {
-		 * 
-		 * theShopper.PurchaseList=PurchaseList; }
-		 * 
-		 * 
-		 * public void addPurchase(Items item, ArrayList<Items> PurchaseList) {
-		 * PurchaseList.add(item); System.out.println("you bought a " +
-		 * item.toString()); }
-		 * 
-		 * public void displayPurchases(ArrayList<Items> PurchaseList) {
-		 * System.out.println(PurchaseList); }
-		 */
+	
 
 	}
 
