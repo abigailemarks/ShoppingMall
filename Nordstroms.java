@@ -11,7 +11,7 @@ public class Nordstroms extends Store {
 		boolean shopping = true;
 		ArrayList<Items> ReturnList = new ArrayList<Items>();
 
-		System.out.println("hi welcome to nordstroms!! we sell");
+		System.out.println("hi welcome to nordstroms!! we sell a bunch of things!!");
 		System.out.println("You can also type B to see your balance,");
 		System.out.println("or L to list the items you have purchased");
 		System.out.println("or E to exit the store");

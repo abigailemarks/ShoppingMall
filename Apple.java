@@ -44,7 +44,10 @@ public class Apple extends Store {
 						returnMenu.addItem(ReturnList.get(j).toString() +" "+ ReturnList.get(j).price);
 					}
 				}
+				returnMenu.addItem("i changed my mind/ nothing to return");
 				int returnAnswer = returnMenu.displayAndChoose();
+				
+				if (returnAnswer != ReturnList.size() + 1) {
 				System.out.println("you returned a(n)" + ReturnList.get(returnAnswer-1).toString());
 				theShopper.balance = theShopper.balance + ReturnList.get(returnAnswer - 1).price;
 				
@@ -56,7 +59,7 @@ public class Apple extends Store {
 					
 				}
 				ReturnList.remove(returnAnswer - 1);
-				
+				}
 			}
 
 			else {

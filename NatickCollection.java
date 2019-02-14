@@ -17,6 +17,10 @@ public class NatickCollection extends Mall {
 		StoreList.add(Nordstroms);
 		Store Wegmans = new Wegmans();
 		StoreList.add(Wegmans);
+		Store AmericanGirl = new AmericanGirl();
+		StoreList.add(AmericanGirl);
+		Store Justice = new Justice();
+		StoreList.add(Justice);
 		return StoreList;
 	}
 }
