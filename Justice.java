@@ -14,16 +14,16 @@ public class Justice extends Store {
 		boolean shopping = true;
 		ArrayList<Items> ReturnList = new ArrayList<Items>();
 
-		System.out.println("hi welcome to apple buy a bunch of stuff !!");
+		System.out.println("hi welcome to justice buy a bunch of stuff !!");
 		System.out.println("You can also type B to see your balance,");
 		System.out.println("or L to list the items you have purchased");
 		System.out.println("or E to exit the store");
 		while (shopping == true) {
 			LSMenu myMenu = new LSMenu("Choose one: ");
-			Items ipod = new Items("ipod", 100, "Apple", true);
-			Items ipad = new Items("ipad", 500, "Apple", true);
-			Items iphone = new Items("iphone", 800, "Apple", true);
-			Items[] Itemlist = { ipod, ipad, iphone };
+			Items shirt = new Items("bright pink neon shirt", 15, "Justice", true);
+			Items sweatshirt = new Items("bright green neon sweatshirt with sequins", 15, "Justice", true);
+			Items lipgloss = new Items("sparkle lipgloss", 3, "Justice", false);
+			Items[] Itemlist = { shirt, sweatshirt, lipgloss };
 			for (int i = 0; i < Itemlist.length; i++) {
 				myMenu.addItem(Itemlist[i].toString() + " " + Itemlist[i].price);
 			}
